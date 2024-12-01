@@ -8,7 +8,10 @@ defmodule AdventOfCode.MixProject do
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      dialyzer: [flags: [:unmatched_returns, :error_handling, :underspecs]]
+      dialyzer: [
+        flags: [:unmatched_returns, :error_handling, :underspecs],
+        plt_add_apps: [:mix]
+      ]
     ]
   end
 
@@ -30,7 +33,7 @@ defmodule AdventOfCode.MixProject do
       {:gettext, ">= 0.0.0", only: [:dev], runtime: false},
       {:sobelow, ">= 0.0.0", only: [:dev], runtime: false},
       {:mix_audit, ">= 0.0.0", only: [:dev], runtime: false},
-      {:pre_commit, "~> 0.3.4", only: [:dev], runtime: false},
+      {:pre_commit, "~> 0.3.4", only: [:dev], runtime: false}
     ]
   end
 end
