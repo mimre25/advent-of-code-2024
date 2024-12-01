@@ -1,5 +1,5 @@
 import Config
 
 config :pre_commit,
-  commands: ["check"],
+  commands: ["format", "check"],
   verbose: true
