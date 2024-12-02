@@ -6,6 +6,7 @@ defmodule Mix.Tasks.Main do
   def run([day | _]) do
     case String.to_integer(day) do
       1 -> AdventOfCode.One.main()
+      2 -> AdventOfCode.Two.main()
       _ -> IO.puts("Day #{day} not implemented yet")
     end
   end
