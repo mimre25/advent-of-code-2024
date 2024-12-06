@@ -10,9 +10,19 @@ defmodule Input do
     File.stream!("input/#{day}")
   end
 
+  @doc """
+    Read a file into a list of lines
+  """
+  def read_file_into_list(day) do
+    File.stream!("input/#{day}") |> Enum.to_list()
+  end
+
   @spec read_file_into_matrix(integer()) :: %{
           integer() => %{integer() => String.t()}
         }
+  @doc """
+    Read a file into a matrix of characters
+  """
   def read_file_into_matrix(day) do
     File.stream!("input/#{day}")
     |> Enum.map(fn line ->
