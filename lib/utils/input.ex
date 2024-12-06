@@ -1,6 +1,6 @@
 defmodule Input do
   @moduledoc """
-    Helpers to get the input
+    Utility functions to get the input
   """
 
   @doc """
@@ -27,6 +27,7 @@ defmodule Input do
     File.stream!("input/#{day}")
     |> Enum.map(fn line ->
       String.split(line, "", trim: true)
+      |> Enum.filter(fn x -> x != "\n" end)
       |> Enum.with_index(fn element, index -> {index, element} end)
       |> Map.new()
     end)
