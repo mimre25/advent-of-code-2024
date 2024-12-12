@@ -1,7 +1,7 @@
 defmodule AdventOfCode.Six do
   @moduledoc false
 
-  @typep matrix :: Types.matrix()
+  @typep matrix :: Types.matrix(String.t())
 
   @doc false
   def main() do

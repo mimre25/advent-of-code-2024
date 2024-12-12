@@ -1,7 +1,7 @@
 defmodule AdventOfCode.Eight do
   @moduledoc false
 
-  @typep matrix :: Types.matrix()
+  @typep matrix :: Types.matrix(String.t())
   @typep position :: {non_neg_integer(), non_neg_integer()}
 
   @doc false

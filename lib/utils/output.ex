@@ -3,7 +3,7 @@ defmodule Output do
     Utility functions to generate output.
   """
 
-  @spec matrix_to_str(Types.matrix()) :: String.t()
+  @spec matrix_to_str(Types.matrix(String.t())) :: String.t()
   @doc """
     Turns a matrix into a string for printing
   """
