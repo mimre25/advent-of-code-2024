@@ -14,6 +14,7 @@ defmodule Mix.Tasks.Main do
       7 -> AdventOfCode.Seven.main()
       8 -> AdventOfCode.Eight.main()
       9 -> AdventOfCode.Nine.main()
+      10 -> AdventOfCode.Ten.main()
       _ -> IO.puts("Day #{day} not implemented yet")
     end
   end
