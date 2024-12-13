@@ -41,4 +41,8 @@ defmodule Progress do
     {:ok, _} = Agent.start_link(fn -> {0.0, 0.0} end, name: ProgressAgent)
     :ok
   end
+
+  def stop() do
+    Agent.stop(ProgressAgent)
+  end
 end
