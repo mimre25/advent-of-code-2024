@@ -33,7 +33,6 @@ defmodule AdventOfCode.MixProject do
       {:doctor, ">= 0.0.0", only: [:dev], runtime: false},
       {:ex_doc, ">= 0.0.0", only: [:dev], runtime: false},
       {:gettext, ">= 0.0.0", only: [:dev], runtime: false},
-      {:sobelow, ">= 0.0.0", only: [:dev], runtime: false},
       {:mix_audit, ">= 0.0.0", only: [:dev], runtime: false},
       {:pre_commit, "~> 0.3.4", only: [:dev], runtime: false}
     ]
