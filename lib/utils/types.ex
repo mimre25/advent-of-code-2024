@@ -6,6 +6,7 @@ defmodule Types do
   @type t :: integer() | String.t()
 
   @type matrix(type) :: %{non_neg_integer() => %{non_neg_integer() => type}}
+  @type tuple_matrix(type) :: %{{non_neg_integer(), non_neg_integer()} => type}
 
   @spec string_to_integer(matrix(String.t())) :: matrix(integer())
   @doc """
@@ -42,6 +43,16 @@ defmodule Types do
   def update_matrix(matrix, i, j, char) do
     Map.update!(matrix, i, fn row ->
       Map.update!(row, j, fn _ -> char end)
+    end)
+  end
+
+  @spec matrix_to_tuple_matrix(matrix(t())) :: tuple_matrix(t())
+  def matrix_to_tuple_matrix(matrix) do
+    matrix
+    |> Enum.reduce(%{}, fn {i, row}, acc ->
+      Enum.reduce(row, acc, fn {j, e}, inner_acc ->
+        Map.put(inner_acc, {i, j}, e)
+      end)
     end)
   end
 end
