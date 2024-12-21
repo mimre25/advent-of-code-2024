@@ -20,7 +20,7 @@ defmodule Mix.Tasks.Main do
       13 -> AdventOfCode.Thirteen.main()
       14 -> AdventOfCode.Fourteen.main()
       15 -> AdventOfCode.Fifteen.main()
-      16 -> AdventOfCode.Sixteen.main()
+      # 16 -> AdventOfCode.Sixteen.main()
       17 -> AdventOfCode.Seventeen.main()
       18 -> AdventOfCode.Eighteen.main()
       19 -> AdventOfCode.Nineteen.main()
