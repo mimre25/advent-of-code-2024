@@ -12,11 +12,12 @@ defmodule Progress do
   end
 
   @doc """
-    Increase the done value by n and renders the progress bar afterwards
+    Increase the done value by 1 and renders the progress bar afterwards
+    Returns val
   """
-  def add_done(n) do
-    Agent.update(ProgressAgent, fn {done, total} -> {done + n, total} end)
-    Progress.render()
+  def add_done(val) do
+    add_done()
+    val
   end
 
   @doc """
