@@ -43,7 +43,13 @@ defmodule Progress do
     :ok
   end
 
-  def stop() do
+  @doc """
+    Stops the progress bar
+
+    If given a value, returns it (for convenience in pipes), otherwise returns :ok.
+  """
+  def stop(val \\ :ok) do
     Agent.stop(ProgressAgent)
+    val
   end
 end
